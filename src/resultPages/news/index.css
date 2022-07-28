@@ -1,3 +1,576 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
 
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body,
+body::before,
+body::after,
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+[class] {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sr-only {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+footer {
+  background: #0f0f0f;
+  color: #878787;
+}
+footer p {
+  width: 160px;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 25px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: auto;
+}
+footer address {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+footer small {
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+
+.header {
+  position: relative;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-nav-button {
+  position: absolute;
+}
+
+.news {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.news-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.news-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #24388d;
+  margin: 1rem 0;
+}
+.news-title::before {
+  content: "";
+  display: inline-block;
+  background: url(../../../assets/images/icon-news-headline.svg) no-repeat;
+  width: 0.5rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+.news-press {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #14182c;
+}
+.news-table {
+  border-top: 3px solid #24388d;
+  border-bottom: 3px solid #24388d;
+}
+
+@media (max-width: 767px) {
+  .news-items {
+    width: 50%;
+  }
+}
+.news-items button {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  width: 100%;
+  border: 1px solid gray;
+  color: #24388d;
+  background: white;
+  padding: 12.5px 0px;
+}
+
+.news-list .is--select button {
+  background: #24388d;
+  color: white;
+}
+
+.news-section {
+  padding: 2.5rem 1.25rem;
+  display: none;
+}
+.news-section.is--select {
+  display: block;
+}
+
+.news-press-search-container {
+  padding: 1.25rem 0;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+.news-press-search-container select {
+  position: relative;
+  width: 20%;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f5f5f5;
+  background-image: url(../../../assets/images/);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  text-indent: 0.375rem;
+  line-height: 1.3125rem;
+}
+.news-press-search-container select::after {
+  content: "";
+  display: block;
+  width: 0.625rem;
+  height: 0.5rem;
+  background: black;
+}
+.news-press-search-container .search-input {
+  width: 80%;
+  border-bottom: 1px solid black;
+}
+.news-press-search-container .search-input input {
+  width: 100%;
+  border: 0;
+}
+.news-press-search-container button {
+  position: absolute;
+  right: 0;
+  background: url(../../../assets/images/icon-search.svg) no-repeat;
+  border: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+.news-table {
+  text-align: center;
+}
+.news-table thead {
+  border-bottom: 1px solid #14182c;
+}
+.news-table tbody td {
+  padding: 0.9375rem;
+}
+.news-table tbody td time {
+  font-size: 0.75rem;
+  color: #24388d;
+}
+.news-table th {
+  color: #24388d;
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+.news-table th:first-child {
+  width: 15%;
+  padding: 0.9375rem 0;
+}
+.news-table th:nth-child(2) {
+  width: 55%;
+  padding: 0.9375rem 0;
+}
+.news-table th:last-child {
+  width: 40%;
+  padding: 0.9375rem 0;
+}
+.news-table tr {
+  border-bottom: 1px solid #616161;
+}
+.news-table tr td {
+  color: #24388d;
+}
+
+@media (max-width: 767px) {
+  .news-press-link img {
+    display: none;
+  }
+}
+
+.press-content-title, .press-content-data {
+  width: 55vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.press-content-title {
+  color: #24388d;
+  margin-bottom: 0.5rem;
+}
+.press-content-data {
+  color: #878787;
+}
+
+.pagination-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 0.875rem;
+  padding: 1.125rem 1rem;
+  margin-top: 0.75rem;
+}
+.pagination-container li {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  color: #919bc6;
+}
+.pagination-container li.is--select {
+  color: #24388d;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.pagination-container .button-prev {
+  border: 0;
+  background: url(../../../assets/images/button-prev.svg) no-repeat;
+  width: 1rem;
+  height: 1rem;
+}
+.pagination-container .button-next {
+  border: 0;
+  background: url(../../../assets/images/button-next.svg) no-repeat;
+  width: 1rem;
+  height: 1rem;
+}
 
 /*# sourceMappingURL=index.css.map */
