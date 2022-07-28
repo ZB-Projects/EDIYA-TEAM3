@@ -1,0 +1,180 @@
+@use "./../../shared" as *;
+
+$break: 768px;
+@mixin mobile {
+  @media (max-width: ($break - 1)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $break) {
+    @content;
+  }
+}
+
+@mixin media($media) {
+  @if $media == "mobile" {
+    @media (max-width: ($break - 1)) {
+      @content;
+    }
+  }
+
+  @if $media == "desktop" {
+    @media (min-width: $break) {
+      @content;
+    }
+  }
+
+  @if $media != "mobile" and $media != "desktop" {
+    @error "미디어 유형이 유효하지 않습니다";
+  }
+}
+
+@mixin flexbox($d: row, $j: flex-start, $a: stretch, $w: nowrap) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+  flex-wrap: $w;
+}
+
+@mixin autoMargin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin marginX($marginX: 0) {
+  margin-left: rem($marginX);
+  margin-right: rem($marginX);
+}
+
+@mixin marginY($marginY: 0) {
+  margin-top: rem($marginY);
+  margin-bottom: rem($marginY);
+}
+
+@mixin paddingY($paddingY: 0) {
+  padding-top: rem($paddingY);
+  padding-bottom: rem($paddingY);
+}
+
+@mixin paddingX($paddingX: 0) {
+  padding-left: rem($paddingX);
+  padding-right: rem($paddingX);
+}
+
+main {
+  @include paddingX(18px);
+}
+
+form {
+  @include flexbox($d: column);
+  background: $grayscale-white;
+}
+
+.search {
+  @include mobile {
+    @include flexbox;
+    @include fontBold(13px);
+
+    &-tab {
+      @include autoMargin;
+      @include paddingY(10px);
+      border: 0;
+      width: 50%;
+      background: $grayscale-snow;
+      color: $primary-blue1;
+    }
+
+    &-tab.is--active {
+      border: 0;
+      width: 50%;
+      background: $primary-blue1;
+      color: $grayscale-white;
+    }
+  }
+}
+
+.tab-panel {
+  @include mobile {
+    display: none;
+    position: relative;
+
+    .search-input {
+      width: 100%;
+      height: rem(26px);
+    }
+
+    &.is--active {
+      display: block;
+
+      .tab-panel-inputform {
+        @include paddingX(8px);
+        @include paddingY(8px);
+
+        background-color: $primary-blue1;
+      }
+    }
+
+    .search-button {
+      position: absolute;
+      right: rem(10px);
+      top: rem(13px);
+      background-image: url(./../../../assets/images/icon-search.svg);
+      background-repeat: no-repeat;
+      background-color: transparent;
+
+      width: rem(24px);
+      height: rem(24px);
+      padding: 0;
+      border: 0;
+    }
+  }
+}
+
+.store-item {
+  background: $grayscale-white;
+  border: 2px solid $grayscale-snow;
+  color: $primary-blue1;
+
+  @include mobile {
+    a {
+      display: block;
+      @include flexbox($a: center);
+    }
+
+    .ediya-thumnail {
+      display: inline-block;
+      margin: rem(10px);
+    }
+
+    dl {
+      padding: rem(10px);
+      flex-grow: 1;
+    }
+    dt {
+      @include fontBold(15px);
+    }
+
+    dd {
+      @include fontRegular(13px);
+      margin-top: rem(2px);
+    }
+  }
+}
+
+.iframe-wrapper {
+  margin-top: rem(20px);
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
