@@ -1,0 +1,11 @@
+// 상하 패딩
+@mixin paddingY($paddingY: 0) {
+  padding-top: rem($paddingY);
+  padding-bottom: rem($paddingY);
+}
+
+// 좌우 패딩
+@mixin paddingX($paddingX: 0) {
+  padding-left: rem($paddingX);
+  padding-right: rem($paddingX);
+}

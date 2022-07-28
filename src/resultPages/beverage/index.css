@@ -342,6 +342,48 @@ a {
   margin: -1px;
 }
 
+footer {
+  background: #0f0f0f;
+  color: #878787;
+}
+footer p {
+  width: 160px;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 25px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: auto;
+}
+footer address {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+footer small {
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+
+.header {
+  position: relative;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 .beverage {
   text-align: center;
   color: #0f0f0f;

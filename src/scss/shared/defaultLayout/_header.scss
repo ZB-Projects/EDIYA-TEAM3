@@ -6,5 +6,12 @@
 
   &-nav-button {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-nav-list {
+    display: flex;
+    flex-flow: row nowrap;
   }
 }
