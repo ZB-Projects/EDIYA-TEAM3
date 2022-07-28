@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <title>이디야 - 메인</title>
     <!-- 본인 css로 채우기 -->
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="/resultPages/login/index.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1 class="sr-only">이디야 커피</h1>
-      <button class="navigationButton">네비게이션 보기</button>
-      <ul class="navigation">
-        <li tabindex="-1">이디야 디자인</li>
-        <li tabindex="-1">로그인</li>
-        <li tabindex="-1">회원가입</li>
-        <li tabindex="-1">이디야 음료</li>
-        <li tabindex="-1">이디야 뉴스</li>
-        <li tabindex="-1">매장찾기</li>
+      <button class="header-nav-button"><span class="sr-only">네비게이션 보기</span></button>
+      <ul class="header-nav-list">
+        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">이디야 디자인</a></li>
+        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">로그인</a></li>
+        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">회원가입</a></li>
+        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">이디야 음료</a></li>
+        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">이디야 뉴스</a></li>
+        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">매장찾기</a></li>
       </ul>
     </header>
     <main>
@@ -27,23 +27,23 @@
         <form action="#" class="member-form">
           <fieldset>
             <legend class="sr-only">회원 로그인 폼</legend>
-            <div>
-              <label for="memberEmail">이메일</label>
+            <div class="member-email-wrapper wrapper">
+              <label class="input-label" for="memberEmail">이메일</label>
               <input type="email" class="member-email" id="memberEmail" required />
               <p class="member-email-error">이메일 입력 방법이 잘못되었습니다.(예: user@domain.io)</p>
             </div>
-            <div>
-              <label for="memberPassword">패스워드</label>
+            <div class="member-password-wrapper wrapper">
+              <label class="input-label" for="memberPassword">패스워드</label>
               <input type="password" class="member-password" id="memberPassword" required />
               <p class="member-password-error">패스워드는 숫자,영어 조합 6자 이상 입력해야 합니다.</p>
             </div>
-            <div>
-              <label for="memberEmailSave"></label>
+            <div class="member-checkbox-wrapper">
               <input type="checkbox" class="member-email-save" id="memberEmailSave" />
+              <label for="memberEmailSave">이메일 저장</label>
             </div>
-            <div>
-              <button class="button member-submit-btn" type="submit">로그인</button>
-              <a class="button member-sign-link" href="/">회원가입</a>
+            <div class="member-button-wrapper">
+              <button class="submit-button member-submit-btn" type="submit">로그인</button>
+              <a class="link-button member-sign-link" href="/">회원가입</a>
             </div>
           </fieldset>
         </form>
