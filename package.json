@@ -3,7 +3,7 @@
     "start": "run-p watch serve",
     "sass": "sass src/scss/pages:src/resultPages",
     "watch": "npm run sass -- --watch",
-    "serve": "live-server src/"
+    "serve": "live-server src"
   },
   "dependencies": {
     "live-server": "^1.2.2",
