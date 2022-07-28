@@ -1,0 +1,7 @@
+@use "../../shared/constants" as *;
+
+.beverage {
+  &-item {
+    background: $grayscale-snow;
+  }
+}
