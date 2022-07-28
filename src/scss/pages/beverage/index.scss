@@ -1,0 +1,121 @@
+@use "../../shared" as *;
+
+@mixin autoMarginX {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin transitionZoomIn {
+  transform: scale(1.1);
+  transition: all 0.4s ease;
+}
+
+@mixin flexbox ($d: row, $w: nowrap) {
+  display: flex;
+  flex-direction: $d;
+  flex-wrap: $w;
+}
+
+@mixin pos ($t: auto, $r: auto, $b: auto, $l: auto) {
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
+.beverage {
+  text-align: center;
+  color: $grayscale-black;
+  font-size: rem(16px);
+  
+  &-list {
+    @include flexbox($d: column);
+
+    gap: rem(20px);
+    margin: rem(18px);
+    align-items: center;
+
+    @include desktop {
+      @include autoMarginX;
+      @include flexbox($w: wrap);
+
+      width: 740px;
+      justify-content: space-between;
+    }
+  }
+
+  &-item {
+    position: relative;
+    background: $grayscale-snow;
+    padding: rem(20px) rem(22px) rem(44px) rem(22px);
+    width: 360px;
+
+    img:hover {
+      @include transitionZoomIn;
+    }
+  }
+
+  &-info {
+    display: none;
+
+    &.is--selected {
+      @include pos($t: 0, $l: 0);
+
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: rem(30px) rem(20px) 0 rem(20px);
+      border: 1px solid $grayscale-gray;
+      background: $grayscale-snow;
+      opacity: 0.8;
+      text-align: left;
+    }
+
+    &-name {
+      font-size: rem(18px);
+      border-bottom: 2px solid $grayscale-black;
+      
+      p {
+        margin-top: rem(8px);
+        margin-bottom: rem(16px);
+        color: $grayscale-gray;
+      }
+    }
+
+    &-desc {
+      margin-top: rem(10px);
+      line-height: 1.25;
+    }
+
+    &-nutrition {
+      @include flexbox($w: wrap);
+      @include pos;
+
+      bottom: rem(11px);
+
+      dd, dt {
+        width: 24%;
+      }
+
+      dd {
+        margin-bottom: rem(5px);
+      }
+
+      dt:nth-child(4n + 3) {
+        border-left: 1px solid black;
+        padding-left: rem(6px);
+      }
+      
+    }
+
+    .close-btn {
+      @include pos($t: rem(20px), $r: rem(20px));
+
+      border: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url(../../../assets/images/button-close.svg);
+    }
+  }
+}
