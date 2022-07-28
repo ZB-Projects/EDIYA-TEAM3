@@ -1,0 +1,10 @@
+@use "../functions/unit";
+
+@mixin fontRegular($fontSize: 16px) {
+  font-size: rem($fontSize);
+  font-weight: 400;
+}
+@mixin fontBold($fontSize: 16px) {
+  font-size: rem($fontSize);
+  font-weight: 700;
+}

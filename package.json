@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "run-p watch serve",
+    "sass": "sass src/scss/pages:src/resultPages",
+    "watch": "npm run sass -- --watch",
+    "serve": "live-server src/resultPages"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.54.0"
+  }
+}
