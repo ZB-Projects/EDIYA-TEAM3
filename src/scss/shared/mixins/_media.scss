@@ -1,0 +1,14 @@
+$break: 768px;
+
+@mixin mobile {
+  //연산은 연산기호 옆은 띄어두어야함
+  @media (max-width: ($break - 1)) {
+    @content;
+  }
+}
+@mixin desktop {
+  //연산은 연산기호 옆은 띄어두어야함
+  @media (min-width: $break) {
+    @content;
+  }
+}
