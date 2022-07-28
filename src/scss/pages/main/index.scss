@@ -1,4 +1,264 @@
-@use "../../shared/classes";
+@use "../../shared" as *;
+@use "sass:math";
 body {
-  background: salmon;
+  @include mobile {
+    background: yellow;
+  }
+  @include desktop {
+    background: $grayscale-snow;
+  }
+}
+main {
+  background: whitesmoke;
+}
+@mixin bounceAnimation($from, $to) {
+  @keyframes bounce {
+    from {
+      top: $from;
+    }
+    to {
+      top: $to;
+    }
+  }
+  animation-duration: 2s;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.introduction {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background: $grayscale-white;
+  line-height: 1.4;
+  padding-top: rem(42px);
+  height: rem(387px);
+  &::before {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: rem(245px);
+    background: $secondary-lightblue1;
+  }
+
+  span {
+    display: block;
+  }
+  .light {
+    @include fontRegular(24px);
+  }
+  .bold {
+    @include fontBold(32px);
+    color: $primary-blue1;
+  }
+  .subtitle {
+    margin-top: rem(15px);
+    @include fontRegular(14px);
+  }
+  .subtitle::before {
+    display: block;
+    content: "";
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: rem(15px);
+    width: rem(40px);
+    height: rem(1px);
+    background: $grayscale-black;
+  }
+}
+@mixin centeredBgImage {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.menu-button {
+  position: relative;
+  width: rem(91px);
+  height: rem(31px);
+  padding: rem(8px) rem(18px);
+  color: $primary-blue1;
+  border: 1px solid currentColor;
+  background: transparent;
+  @include fontBold(14px);
+  margin-top: rem(15px);
+  &::after {
+    z-index: 1;
+    content: "";
+    display: block;
+    position: absolute;
+    @include centeredBgImage;
+    @include mobile {
+      background-image: url("../../../assets/images/choco-rice-img.png");
+      transform: translateX(-35%);
+      width: rem(300px);
+      height: rem(161px);
+    }
+    @include desktop {
+      background-image: url("../../../assets/images/cheese-cookie.png");
+      width: rem(236px);
+      height: rem(411px);
+      transform: translate(-150%, -40%);
+    }
+    @include bounceAnimation(rem(-10px), rem(10px));
+  }
+  &::before {
+    @include desktop {
+      z-index: 1;
+      content: "";
+      display: block;
+      position: absolute;
+      @include centeredBgImage;
+      background-image: url("../../../assets/images/choco-rice.png");
+      transform: translate(50%, -35%);
+      width: rem(350px);
+      height: rem(300px);
+    }
+    @include bounceAnimation(rem(-10px), rem(10px));
+  }
+}
+@mixin responsiveIframe($w: 16, $h: 9) {
+  position: relative;
+  padding-top: math.div($h, $w) * 100%;
+  height: 0 !important;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.iframeWrapper {
+  @include responsiveIframe;
+}
+.video {
+  @include desktop {
+    grid-area: video;
+  }
+}
+.notice {
+  display: flex;
+  background: white;
+  position: relative;
+  height: rem(115px);
+  @include desktop {
+    grid-area: notice;
+  }
+}
+.notice-title {
+  @include fontBold(16px);
+  display: block;
+  padding: rem(15px);
+  min-width: rem(125px);
+  color: $grayscale-white;
+  background: $gradients-blue;
+}
+.notice-button {
+  position: absolute;
+  left: rem(90px);
+  bottom: rem(15px);
+  border: 1px solid currentColor;
+  color: $grayscale-white;
+  background: transparent;
+  $buttonWidth: rem(16px);
+  width: $buttonWidth;
+  height: $buttonWidth;
+  @include fontRegular(11px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  &.prev {
+    transform: translateX(-$buttonWidth);
+  }
+}
+.notice-content-list {
+  padding: rem(15px);
+  .notice-content {
+    display: none;
+    &.active {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+    }
+  }
+
+  .notice-content-title {
+    @include fontBold(16px);
+    color: $primary-blue1;
+  }
+  time {
+    @include fontRegular(12px);
+    color: $grayscale-gray;
+  }
+  .notice-content-summary {
+    margin-top: rem(10px);
+    @include fontRegular(13px);
+    color: $grayscale-darkgray;
+    line-height: 1.5;
+  }
+}
+.news {
+  position: relative;
+  background: $primary-blue1;
+  padding: rem(15px);
+  @include desktop {
+    grid-area: news;
+  }
+}
+.news-title {
+  @include fontBold(15px);
+  color: $grayscale-white;
+}
+.news-content-list {
+  @include fontRegular(12px);
+  margin-top: rem(15px);
+  color: $grayscale-white;
+  .news-content {
+    display: flex;
+
+    justify-content: space-between;
+    line-height: 1.5;
+  }
+}
+.news-button {
+  position: absolute;
+  top: rem(15px);
+  right: rem(15px);
+  color: $grayscale-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: rem(16px);
+  height: rem(16px);
+  padding: rem(5px);
+  border: 1px solid $grayscale-white;
+}
+
+.more-contents {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  @include desktop {
+    max-width: rem(740px);
+    display: grid;
+    margin-top: rem(62px);
+    grid-template-areas: "video notice" "video news";
+    grid-template-columns: 1fr 1fr;
+  }
 }
