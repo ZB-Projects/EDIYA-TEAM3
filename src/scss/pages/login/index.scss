@@ -6,14 +6,25 @@
   flex-flow: column nowrap;
   align-items: stretch;
   color: $grayscale-white;
-  background-image: url("../../../assets/images/coffee-mobile.jpg");
   background-position: 50%;
   background-size: cover;
 
+  @include mobile {
+    background-image: url("../../../assets/images/coffee-mobile.jpg");
+  }
+  @include desktop {
+    background-image: url("../../../assets/images/coffee-desktop.jpg");
+  }
+
   &-title {
-    margin-top: 70px;
     font-size: rem(36px);
     text-align: center;
+    @include mobile {
+      margin-top: rem(70px);
+    }
+    @include desktop {
+      margin-top: rem(100px);
+    }
   }
 
   &-text-en {
@@ -27,6 +38,13 @@
     margin-bottom: rem(114px);
     font-size: rem(12px);
     text-align: center;
+
+    @include mobile {
+      margin-bottom: rem(114px);
+    }
+    @include desktop {
+      margin-bottom: rem(100px);
+    }
   }
 
   &-email,
@@ -71,6 +89,7 @@
 
     @include desktop {
       gap: rem(20px);
+      margin-bottom: rem(70px);
     }
   }
 
