@@ -1,12 +1,7 @@
 @use "../../shared" as *;
 @use "sass:math";
 body {
-  @include mobile {
-    background: yellow;
-  }
-  @include desktop {
     background: $grayscale-snow;
-  }
 }
 main {
   background: whitesmoke;
