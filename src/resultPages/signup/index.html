@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <title>이디야 - 메인</title>
     <!-- 본인 css로 채우기 -->
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="/resultPages/signup/index.css" />
   </head>
-  <body>
+  <body class="body">
     <header>
       <h1 class="sr-only">이디야 커피</h1>
       <button class="navigationButton">네비게이션 보기</button>
@@ -27,24 +27,24 @@
         <form action="#" class="sign-form">
           <fieldset>
             <legend class="sr-only">회원가입 폼</legend>
-            <div>
-              <label for="signEmail">이메일</label>
+            <div class="wrapper">
+              <label for="signEmail" class="input-label">이메일</label>
               <input type="email" class="sign-email" id="signEmail" required />
               <p class="sign-email-error">이메일 입력 방법이 잘못되었습니다.(예: user@domain.io)</p>
             </div>
-            <div>
-              <label for="signPassword">패스워드</label>
+            <div class="wrapper">
+              <label for="signPassword" class="input-label">패스워드</label>
               <input type="password" class="sign-password" id="signPassword" required />
               <p class="sign-password-error">패스워드는 숫자,영어 조합 6자 이상 입력해야 합니다.</p>
             </div>
-            <div>
-              <label for="signPasswordCheck">패스워드 확인</label>
+            <div class="wrapper">
+              <label for="signPasswordCheck" class="input-label">패스워드 확인</label>
               <input type="password" class="sign-password-check" id="signPasswordCheck" required />
-              <p class="sign-password-">패스워드가 일치하지 않습니다.</p>
+              <p class="sign-password-check-error">패스워드가 일치하지 않습니다.</p>
             </div>
-            <div>
-              <button class="button sign-submit-btn" type="submit">가입하기</button>
-              <a class="button sign-sign-link" href="/">로그인</a>
+            <div class="sign-button-wrapper">
+              <button class="submit-button sign-submit-btn" type="submit">가입하기</button>
+              <a class="link-button sign-sign-link" href="../login">로그인</a>
             </div>
           </fieldset>
         </form>

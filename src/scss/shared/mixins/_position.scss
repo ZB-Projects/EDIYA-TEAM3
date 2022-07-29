@@ -1,3 +1,4 @@
+@use "./../functions" as *;
 // position absolute
 @mixin posabs($t: auto, $r: auto, $b: auto, $l: auto) {
   position: absolute;
