@@ -387,6 +387,7 @@ footer small {
 main {
   padding-left: 1.125rem;
   padding-right: 1.125rem;
+  position: relative;
 }
 
 form {
@@ -397,18 +398,44 @@ form {
   flex-wrap: nowrap;
   background: #fefefe;
 }
-
-@media (max-width: 767px) {
-  .search {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    font-size: 0.8125rem;
-    font-weight: 700;
+@media (min-width: 768px) {
+  form {
+    width: 26.25rem;
+    height: 13.0625rem;
+    position: fixed;
+    top: 6.875rem;
+    right: 3.75rem;
+    z-index: 1;
   }
-  .search-tab {
+}
+
+.search-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.search-button-tab {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border: 0;
+  width: 50%;
+  background: #f5f5f5;
+  color: #24388d;
+}
+.search-button-tab.is--active {
+  border: 0;
+  width: 50%;
+  background: #24388d;
+  color: #fefefe;
+}
+@media (max-width: 767px) {
+  .search-button-tab {
     margin-left: auto;
     margin-right: auto;
     padding-top: 0.625rem;
@@ -418,7 +445,7 @@ form {
     background: #f5f5f5;
     color: #24388d;
   }
-  .search-tab.is--active {
+  .search-button-tab.is--active {
     border: 0;
     width: 50%;
     background: #24388d;
@@ -426,37 +453,38 @@ form {
   }
 }
 
-@media (max-width: 767px) {
-  .tab-panel {
-    display: none;
-    position: relative;
-  }
-  .tab-panel .search-input {
-    width: 100%;
-    height: 1.625rem;
-  }
-  .tab-panel.is--active {
-    display: block;
-  }
-  .tab-panel.is--active .tab-panel-inputform {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background-color: #24388d;
-  }
-  .tab-panel .search-button {
-    position: absolute;
-    right: 0.625rem;
-    top: 0.8125rem;
-    background-image: url(./../../../assets/images/icon-search.svg);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    width: 1.5rem;
-    height: 1.5rem;
-    padding: 0;
-    border: 0;
-  }
+.tab-panel {
+  display: none;
+  position: relative;
+}
+.tab-panel .tab-panel-inputform {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #24388d;
+}
+.tab-panel .tab-panel-inputform .search-input {
+  width: 100%;
+  height: 1.625rem;
+}
+.tab-panel .tab-panel-inputform .search-button {
+  position: absolute;
+  right: 0.625rem;
+  top: 0.8125rem;
+  background-image: url(./../../../assets/images/icon-search.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+}
+.tab-panel.is--active {
+  display: block;
+}
+.tab-panel.is--active .tab-panel-inputform {
+  background-color: #24388d;
 }
 
 .store-item {
@@ -464,32 +492,31 @@ form {
   border: 2px solid #f5f5f5;
   color: #24388d;
 }
-@media (max-width: 767px) {
-  .store-item a {
-    display: block;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  .store-item .ediya-thumnail {
-    display: inline-block;
-    margin: 0.625rem;
-  }
-  .store-item dl {
-    padding: 0.625rem;
-    flex-grow: 1;
-  }
-  .store-item dt {
-    font-size: 0.9375rem;
-    font-weight: 700;
-  }
-  .store-item dd {
-    font-size: 0.8125rem;
-    font-weight: 400;
-    margin-top: 0.125rem;
-  }
+.store-item a {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.store-item img {
+  margin: 0.625rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
+}
+.store-item dl {
+  padding: 0.625rem;
+  flex-grow: 1;
+}
+.store-item dt {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+.store-item dd {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  margin-top: 0.125rem;
 }
 
 .iframe-wrapper {
@@ -504,6 +531,11 @@ form {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media (min-width: 768px) {
+  .iframe-wrapper {
+    margin-bottom: 1.875rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
