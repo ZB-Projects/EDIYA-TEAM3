@@ -1,26 +1,17 @@
 @use "../../shared" as *;
 
-@mixin flexbox($d: row, $j: flex-start) {
-  display: flex;
-  flex-flow: $d nowrap;
-  justify-content: $j;
-}
-
 // 전체
 .news {
   max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+  @include autoMarginX;
 
   &-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    @include flexbox($d: row, $j: center, $w: wrap);
   }
   &-title {
     @include fontBold(20px);
+    @include marginY(16px);
     color: $primary-blue1;
-    margin: rem(16px) 0;
 
     &::before {
       content: "";
@@ -51,12 +42,14 @@
   @include mobile {
     width: 50%;
   }
+  @include desktop {
+    width: rem(120px);
+  }
 
   button {
     @include fontBold(15px);
     width: 100%;
-    border: 1px solid gray;
-
+    border: 1px solid $grayscale-snow;
     color: $primary-blue1;
     background: white;
     padding: 12.5px 0px;
@@ -74,7 +67,9 @@
 
 // 공통 섹션
 .news-section {
-  padding: rem(40px) rem(20px);
+  @include paddingX(20px);
+  @include paddingY(40px);
+
   display: none;
 
   &.is--select {
@@ -90,14 +85,16 @@
 
   select {
     position: relative;
-    width: 20%;
+    @include mobile {
+      width: 20%;
+    }
+    @include desktop {
+      width: rem(80px);
+      margin-left: 285px;
+    }
     border: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+
     background-color: $grayscale-snow;
-    background-image: url(../../../assets/images/);
-    background-repeat: no-repeat;
-    background-position: 95% 50%;
     text-indent: rem(6px);
     line-height: rem(21px);
   }
@@ -109,7 +106,12 @@
     background: black;
   }
   .search-input {
-    width: 80%;
+    @include mobile {
+      width: 80%;
+    }
+    @include desktop {
+      width: rem(355px);
+    }
     border-bottom: 1px solid black;
 
     input {
@@ -118,8 +120,7 @@
     }
   }
   button {
-    position: absolute;
-    right: 0;
+    @include posabs($r: 0);
     background: url(../../../assets/images/icon-search.svg) no-repeat;
     border: 0;
     width: rem(16px);
@@ -130,12 +131,15 @@
 // 뉴스 테이블
 .news-table {
   text-align: center;
+  max-width: 760px;
   thead {
     border-bottom: 1px solid $grayscale-darkgray;
   }
   tbody {
     td {
-      padding: rem(15px);
+      @include paddingX(15px);
+      @include paddingY(15px);
+
       time {
         font-size: rem(12px);
         color: $primary-blue1;
@@ -149,15 +153,16 @@
   }
   th:first-child {
     width: 15%;
+    @include paddingY(15px);
     padding: rem(15px) 0;
   }
   th:nth-child(2) {
     width: 55%;
-    padding: rem(15px) 0;
+    @include paddingY(15px);
   }
-  th:last-child {
-    width: 40%;
-    padding: rem(15px) 0;
+  th:nth-child(3) {
+    width: 30%;
+    @include paddingY(15px);
   }
   tr {
     border-bottom: 1px solid $grayscale-gray;
@@ -166,14 +171,19 @@
     }
   }
 }
+
 .news-press-link {
   img {
     @include mobile {
       display: none;
     }
+    @include desktop {
+      float: left;
+    }
   }
 }
 .press-content {
+  text-align: start;
   &-title,
   &-data {
     width: 55vw;
@@ -188,7 +198,13 @@
   &-data {
     color: #878787;
   }
+  @include desktop {
+    text-align: start;
+    padding-left: 80px;
+  }
 }
+
+// 페이지네이션
 .pagination-container {
   @include flexbox($j: center);
 
