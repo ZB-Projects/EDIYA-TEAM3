@@ -8,8 +8,13 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="sr-only">이디야 커피</h1>
-      <button class="header-nav-button"><span class="sr-only">네비게이션 보기</span></button>
+      <h1 class="logo"><a href="/" class="home-link"></a><span class="sr-only">이디야 커피</span></h1>
+      <button type="button" class="header-nav-button">
+        <span class="sr-only">네비게이션 보기</span>
+        <span class="header-nav-buttonTop"></span>
+        <span class="header-nav-buttonMiddle"></span>
+        <span class="header-nav-buttonBottom"></span>
+      </button>
       <ul class="header-nav-list">
         <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">이디야 디자인</a></li>
         <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">로그인</a></li>
@@ -43,14 +48,24 @@
             </div>
             <div class="member-button-wrapper">
               <button class="submit-button member-submit-btn" type="submit">로그인</button>
-              <a class="link-button member-sign-link" href="/">회원가입</a>
+              <a class="link-button member-sign-link" href="../signup">회원가입</a>
             </div>
           </fieldset>
         </form>
       </section>
     </main>
     <footer>
-      <p>EDIYA COFFEE</p>
+      <p class="footer-logo"></p>
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item"><a href="/">개인정보처리방침</a></li>
+        <li class="footer-nav-item"><a href="/">맴버스 이용약관</a></li>
+        <li class="footer-nav-item"><a href="/">가맹 안내</a></li>
+        <li class="footer-nav-item"><a href="/">대량쿠폰 구매</a></li>
+        <li class="footer-nav-item"><a href="/">채용안내</a></li>
+        <li class="footer-nav-item"><a href="/">고객의 소리</a></li>
+        <li class="footer-nav-item"><a href="/">사이트맵</a></li>
+        <li class="footer-nav-item"><a href="/">점주의 방</a></li>
+      </ul>
       <address>
         <span class="address-item">서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</span>
         <span class="address-item"><span class="title" aria-label="전화번호">TEL</span><span aria-hidden="true">:</span><a href="tel:025436467">02-543-6467</a></span>
