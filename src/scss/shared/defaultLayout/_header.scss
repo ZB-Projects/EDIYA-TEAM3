@@ -1,4 +1,6 @@
 @use '../../shared/constants' as *;
+@use '../../shared/mixins' as *;
+
 
 header {
   padding: 18px;
@@ -6,56 +8,77 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid gray;
-}
-
-.navigationButton {
-  background-image: url("../../../assets/images/button-navigation.svg");
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-  background-color: transparent;
-  border: 0;
-  width: 50px;
-  height: 50px;
-}
-
-.navigation {
-  display: none;
-  transform: translateX(0px);
-  padding-top: 106px;
-
-  &.is--active {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: $grayscale-darkgray;
-    color: white;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
+  @include desktop{
+    padding:rem(0px) rem(30px);
   }
-
-  &::before {
-    display: block;
-    content: "";
-    background-image: url("../../../assets/images/button-detail-close.svg");
+}
+.navigationButton {
+  @include desktop{
+    display: none;
+  }
+  @include mobile{
+    background-image: url("../../../assets/images/button-navigation.svg");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     background-position: center;
     background-color: transparent;
     border: 0;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    right: 25px;
-    top: 25px;
+    width: 50px;
+    height: 50px;
+  }
+}
+.navigation {
+  @include mobile{
+    display: none;
+    transform: translateX(0px);
+    padding-top: 106px;
+    &.is--active {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $grayscale-darkgray;
+      color: white;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+    &::before {
+      display: block;
+      content: "";
+      background-image: url("../../../assets/images/button-detail-close.svg");
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      background-position: center;
+      background-color: transparent;
+      border: 0;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+    }
+  }
+  @include desktop{
+    display: flex;
+    flex-direction: row;
+    color: $primary-blue1;
+    justify-content: space-between;
+    width: 40%;
+    max-width: rem(427px);
   }
 
+
   li {
-    padding: 12px;
-    border-top: 1px solid $primary-blue2;
-    margin-left: 10px;
-    margin-right: 10px;
+    @include mobile{
+      padding: 12px;
+      border-top: 1px solid $primary-blue2;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
+}
+.logo{
+  width: rem(140px);
+  height: rem(14px);
 }

@@ -7,32 +7,22 @@
     <link rel="stylesheet" href="/resultPages/beverage/index.css" />
   </head>
   <body>
-    <header>
-      <h1>
-        <span  class="sr-only">
+  <header>
+    <h1 >
+      <span  class="sr-only">
           이디야 커피
         </span>
-        <img src="../../assets/images/brand.svg" alt="이디야커피" />
-      </h1>
-      <button class="navigationButton" aria-label="네비게이션 보기"></button>
-      <ul class="navigation is--active">
-        <li tabindex="-1">
-          <a>로그인</a>
-        </li>
-        <li tabindex="-1">
-          <a>회원가입</a>
-        </li>
-        <li tabindex="-1">
-          <a>이디야 음료</a>
-        </li>
-        <li tabindex="-1">
-          <a>이디야 뉴스</a>
-        </li>
-        <li tabindex="-1">
-          <a>매장찾기</a>
-        </li>
-      </ul>
-    </header>
+      <img class="logo" src="../../assets/images/brand.svg" alt="이디야커피" />
+    </h1>
+    <button aria-label="네비게이션 보기" class="navigationButton"></button>
+    <ul class="navigation">
+      <li tabindex="-1"><a href="../login">로그인</a></li>
+      <li tabindex="-1"><a href="../signup">회원가입</a></li>
+      <li tabindex="-1"><a href="../beverage">이디야 음료</a></li>
+      <li tabindex="-1"><a href="../news">이디야 뉴스</a></li>
+      <li tabindex="-1"><a href="../store">매장찾기</a></li>
+    </ul>
+  </header>
     <main>
       <section class="beverage">
         <h2 class="sr-only">이디야 음료</h2>
@@ -281,19 +271,22 @@
       </section>
     </main>
     <footer>
-      <p>EDIYA COFFEE</p>
+      <p class="footer-logo"></p>
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item"><a href="/">개인정보처리방침</a></li>
+        <li class="footer-nav-item"><a href="/">맴버스 이용약관</a></li>
+        <li class="footer-nav-item"><a href="/">가맹 안내</a></li>
+        <li class="footer-nav-item"><a href="/">대량쿠폰 구매</a></li>
+        <li class="footer-nav-item"><a href="/">채용안내</a></li>
+        <li class="footer-nav-item"><a href="/">고객의 소리</a></li>
+        <li class="footer-nav-item"><a href="/">사이트맵</a></li>
+        <li class="footer-nav-item"><a href="/">점주의 방</a></li>
+      </ul>
       <address>
         <span class="address-item">서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</span>
-        <span class="address-item"
-          ><span class="title" aria-label="전화번호">TEL</span><span aria-hidden="true">:</span
-          ><a href="tel:025436467">02-543-6467</a></span
-        >
-        <span class="address-item"
-          ><span class="title" aria-label="팩스번호 ">FAX</span><span aria-hidden="true">:</span> 02-543-7191</span
-        >
-        <span class="address-item"
-          ><span class="title">통신판매업 신고</span><span aria-hidden="true">:</span> 강남 제 002519호</span
-        >
+        <span class="address-item"><span class="title" aria-label="전화번호">TEL</span><span aria-hidden="true">:</span><a href="tel:025436467">02-543-6467</a></span>
+        <span class="address-item"><span class="title" aria-label="팩스번호 ">FAX</span><span aria-hidden="true">:</span> 02-543-7191</span>
+        <span class="address-item"><span class="title">통신판매업 신고</span><span aria-hidden="true">:</span> 강남 제 002519호</span>
         <span class="address-item"><span class="title">대표이사</span><span aria-hidden="true">:</span>문정기</span>
         <small class="copyright"> ⓒ 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED.. </small>
       </address>

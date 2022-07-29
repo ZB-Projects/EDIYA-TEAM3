@@ -7,23 +7,22 @@
     <link rel="stylesheet" href="/resultPages/login/index.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="logo"><a href="/" class="home-link"></a><span class="sr-only">이디야 커피</span></h1>
-      <button type="button" class="header-nav-button">
-        <span class="sr-only">네비게이션 보기</span>
-        <span class="header-nav-buttonTop"></span>
-        <span class="header-nav-buttonMiddle"></span>
-        <span class="header-nav-buttonBottom"></span>
-      </button>
-      <ul class="header-nav-list">
-        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">이디야 디자인</a></li>
-        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">로그인</a></li>
-        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">회원가입</a></li>
-        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">이디야 음료</a></li>
-        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">이디야 뉴스</a></li>
-        <li class="header-nav-item" tabindex="-1"><a class="header-nav-link" href="/">매장찾기</a></li>
-      </ul>
-    </header>
+  <header>
+    <h1 >
+      <span  class="sr-only">
+          이디야 커피
+        </span>
+      <img class="logo" src="../../assets/images/brand.svg" alt="이디야커피" />
+    </h1>
+    <button aria-label="네비게이션 보기" class="navigationButton"></button>
+    <ul class="navigation">
+      <li tabindex="-1"><a href="../login">로그인</a></li>
+      <li tabindex="-1"><a href="../signup">회원가입</a></li>
+      <li tabindex="-1"><a href="../beverage">이디야 음료</a></li>
+      <li tabindex="-1"><a href="../news">이디야 뉴스</a></li>
+      <li tabindex="-1"><a href="../store">매장찾기</a></li>
+    </ul>
+  </header>
     <main>
       <section class="member">
         <h2 class="member-title">로그인</h2>
