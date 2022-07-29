@@ -97,13 +97,13 @@ main {
     position: absolute;
     @include centeredBgImage;
     @include mobile {
-      background-image: url("../../assets/images/choco-rice-img.png");
+      background-image: url("../assets/images/choco-rice-img.png");
       transform: translateX(-35%);
       width: rem(300px);
       height: rem(161px);
     }
     @include desktop {
-      background-image: url("../../assets/images/cheese-cookie.png");
+      background-image: url("../assets/images/cheese-cookie.png");
       width: rem(236px);
       height: rem(411px);
       transform: translate(-150%, -40%);
@@ -117,7 +117,7 @@ main {
       display: block;
       position: absolute;
       @include centeredBgImage;
-      background-image: url("../../../assets/images/choco-rice.png");
+      background-image: url("../assets/images/choco-rice.png");
       transform: translate(50%, -35%);
       width: rem(350px);
       height: rem(300px);

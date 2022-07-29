@@ -472,7 +472,7 @@ main {
 }
 @media (max-width: 767px) {
   .menu-button::after {
-    background-image: url("../../assets/images/choco-rice-img.png");
+    background-image: url("../assets/images/choco-rice-img.png");
     transform: translateX(-35%);
     width: 18.75rem;
     height: 10.0625rem;
@@ -480,7 +480,7 @@ main {
 }
 @media (min-width: 768px) {
   .menu-button::after {
-    background-image: url("../../assets/images/cheese-cookie.png");
+    background-image: url("../assets/images/cheese-cookie.png");
     width: 14.75rem;
     height: 25.6875rem;
     transform: translate(-150%, -40%);
@@ -508,7 +508,7 @@ main {
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../../../assets/images/choco-rice.png");
+    background-image: url("../assets/images/choco-rice.png");
     transform: translate(50%, -35%);
     width: 21.875rem;
     height: 18.75rem;
