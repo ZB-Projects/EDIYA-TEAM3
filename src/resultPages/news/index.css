@@ -397,7 +397,7 @@ footer small {
 .news-title::before {
   content: "";
   display: inline-block;
-  background: url(../../../assets/images/icon-news-headline.svg) no-repeat;
+  background: url(../../assets/images/icon-news-headline.svg) no-repeat;
   width: 0.5rem;
   height: 1rem;
   margin-right: 0.25rem;
@@ -454,7 +454,7 @@ footer small {
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: #f5f5f5;
-  background-image: url(../../../assets/images/);
+  background-image: url(../../assets/images/);
   background-repeat: no-repeat;
   background-position: 95% 50%;
   text-indent: 0.375rem;
@@ -478,7 +478,7 @@ footer small {
 .news-press-search-container button {
   position: absolute;
   right: 0;
-  background: url(../../../assets/images/icon-search.svg) no-repeat;
+  background: url(../../assets/images/icon-search.svg) no-repeat;
   border: 0;
   width: 1rem;
   height: 1rem;
@@ -562,13 +562,13 @@ footer small {
 }
 .pagination-container .button-prev {
   border: 0;
-  background: url(../../../assets/images/button-prev.svg) no-repeat;
+  background: url(../../assets/images/button-prev.svg) no-repeat;
   width: 1rem;
   height: 1rem;
 }
 .pagination-container .button-next {
   border: 0;
-  background: url(../../../assets/images/button-next.svg) no-repeat;
+  background: url(../../assets/images/button-next.svg) no-repeat;
   width: 1rem;
   height: 1rem;
 }

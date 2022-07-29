@@ -25,7 +25,7 @@
     &::before {
       content: "";
       display: inline-block;
-      background: url(../../../assets/images/icon-news-headline.svg) no-repeat;
+      background: url(../../assets/images/icon-news-headline.svg) no-repeat;
       width: rem(8px);
       height: rem(16px);
       margin-right: rem(4px);
@@ -95,7 +95,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     background-color: $grayscale-snow;
-    background-image: url(../../../assets/images/);
+    background-image: url(../../assets/images/);
     background-repeat: no-repeat;
     background-position: 95% 50%;
     text-indent: rem(6px);
@@ -120,7 +120,7 @@
   button {
     position: absolute;
     right: 0;
-    background: url(../../../assets/images/icon-search.svg) no-repeat;
+    background: url(../../assets/images/icon-search.svg) no-repeat;
     border: 0;
     width: rem(16px);
     height: rem(16px);
@@ -208,13 +208,13 @@
   }
   .button-prev {
     border: 0;
-    background: url(../../../assets/images/button-prev.svg) no-repeat;
+    background: url(../../assets/images/button-prev.svg) no-repeat;
     width: rem(16px);
     height: rem(16px);
   }
   .button-next {
     border: 0;
-    background: url(../../../assets/images/button-next.svg) no-repeat;
+    background: url(../../assets/images/button-next.svg) no-repeat;
     width: rem(16px);
     height: rem(16px);
   }

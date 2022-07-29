@@ -6,7 +6,7 @@
   flex-flow: column nowrap;
   align-items: stretch;
   color: $grayscale-white;
-  background-image: url("../../../assets/images/coffee-mobile.jpg");
+  background-image: url("../../assets/images/coffee-mobile.jpg");
   background-position: 50%;
   background-size: cover;
 
@@ -142,5 +142,5 @@ fieldset {
   top: 50%;
   right: rem(14px);
   transform: translateY(-50%);
-  background: url("../../../assets/images/icon-arrow-disabled.svg");
+  background: url("../../assets/images/icon-arrow-disabled.svg");
 }

@@ -384,7 +384,7 @@ footer small {
   flex-flow: column nowrap;
   align-items: stretch;
   color: #fefefe;
-  background-image: url("../../../assets/images/coffee-mobile.jpg");
+  background-image: url("../../assets/images/coffee-mobile.jpg");
   background-position: 50%;
   background-size: cover;
 }
@@ -515,7 +515,7 @@ fieldset {
   top: 50%;
   right: 0.875rem;
   transform: translateY(-50%);
-  background: url("../../../assets/images/icon-arrow-disabled.svg");
+  background: url("../../assets/images/icon-arrow-disabled.svg");
 }
 
 /*# sourceMappingURL=index.css.map */
