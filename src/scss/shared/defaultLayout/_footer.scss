@@ -1,0 +1,69 @@
+@use "../../shared/constants" as *;
+@use "../../shared/functions" as *;
+@use "../../shared/mixins" as *;
+
+footer {
+  background: #0f0f0f;
+  color: #878787;
+  display: flex;
+  flex-flow: column nowrap;
+
+  p {
+    width: 160px;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
+    order: 2;
+  }
+
+  address {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: rem(10px);
+    font-size: 12px;
+    order: 3;
+  }
+
+  small {
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.footer-logo {
+  width: 100%;
+  height: 16px;
+  padding: 30px;
+  background-image: url("../../../assets/images/brand-dark.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-top: 1px solid #878787;
+}
+
+.address-item {
+  width: 100%;
+  text-align: center;
+}
+
+.footer {
+  &-nav-list {
+    order: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    max-width: rem(740px);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: rem(12px);
+    padding: 20px 0;
+    gap: rem(8px);
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,147 @@
+@use "./../../shared/index" as *;
+
+main {
+  @include paddingX(18px);
+  position: relative;
+}
+
+form {
+  @include flexbox($d: column);
+  background: $grayscale-white;
+
+  @include desktop {
+    width: rem(420px);
+    height: rem(209px);
+    position: fixed;
+    top: rem(110px);
+    right: rem(60px);
+    z-index: 1;
+  }
+}
+
+.search-button {
+  @include flexbox;
+  @include fontBold(13px);
+
+  &-tab {
+    @include autoMarginX;
+    @include paddingY(10px);
+    border: 0;
+    width: 50%;
+    background: $grayscale-snow;
+    color: $primary-blue1;
+  }
+
+  &-tab.is--active {
+    border: 0;
+    width: 50%;
+    background: $primary-blue1;
+    color: $grayscale-white;
+  }
+
+  @include mobile {
+    &-tab {
+      @include autoMarginX;
+      @include paddingY(10px);
+      border: 0;
+      width: 50%;
+      background: $grayscale-snow;
+      color: $primary-blue1;
+    }
+
+    &-tab.is--active {
+      border: 0;
+      width: 50%;
+      background: $primary-blue1;
+      color: $grayscale-white;
+    }
+  }
+}
+
+.tab-panel {
+  display: none;
+  position: relative;
+
+  .tab-panel-inputform {
+    @include paddingX(8px);
+    @include paddingY(8px);
+
+    background-color: $primary-blue1;
+
+    .search-input {
+      width: 100%;
+      height: rem(26px);
+    }
+
+    .search-button {
+      position: absolute;
+      right: rem(10px);
+      top: rem(13px);
+      background-image: url(./../../../assets/images/icon-search.svg);
+      background-repeat: no-repeat;
+      background-color: transparent;
+
+      width: rem(24px);
+      height: rem(24px);
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  &.is--active {
+    display: block;
+
+    .tab-panel-inputform {
+      background-color: $primary-blue1;
+    }
+  }
+}
+
+.store-item {
+  background: $grayscale-white;
+  border: 2px solid $grayscale-snow;
+  color: $primary-blue1;
+
+  a {
+    display: block;
+    @include flexbox($a: center);
+  }
+
+  img {
+    margin: rem(10px);
+    width: rem(45px);
+    height: rem(45px);
+  }
+
+  dl {
+    padding: rem(10px);
+    flex-grow: 1;
+  }
+  dt {
+    @include fontBold(15px);
+  }
+
+  dd {
+    @include fontRegular(13px);
+    margin-top: rem(2px);
+  }
+}
+
+.iframe-wrapper {
+  margin-top: rem(20px);
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include desktop {
+    margin-bottom: rem(30px);
+  }
+}

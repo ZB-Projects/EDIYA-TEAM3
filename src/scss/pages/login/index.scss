@@ -1,3 +1,169 @@
-body {
-  background: green;
+@use "../../shared" as *;
+
+.member {
+  padding: rem(20px) rem(39px);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  color: $grayscale-white;
+  background-position: 50%;
+  background-size: cover;
+
+  @include mobile {
+    background-image: url("../../../assets/images/coffee-mobile.jpg");
+  }
+  @include desktop {
+    background-image: url("../../../assets/images/coffee-desktop.jpg");
+  }
+
+  &-title {
+    font-size: rem(36px);
+    text-align: center;
+    @include mobile {
+      margin-top: rem(70px);
+    }
+    @include desktop {
+      margin-top: rem(100px);
+    }
+  }
+
+  &-text-en {
+    margin-top: rem(24px);
+    margin-bottom: rem(9px);
+    font-size: rem(18px);
+    text-align: center;
+  }
+
+  &-text {
+    margin-bottom: rem(114px);
+    font-size: rem(12px);
+    text-align: center;
+
+    @include mobile {
+      margin-bottom: rem(114px);
+    }
+    @include desktop {
+      margin-bottom: rem(100px);
+    }
+  }
+
+  &-email,
+  &-password {
+    width: 100%;
+    height: rem(48px);
+    background: rgba(#fff, 0);
+    padding-left: 10px;
+    border: 0;
+    border-bottom: 1px solid $borders-lightlilac;
+  }
+
+  &-password-wrapper {
+    margin-top: rem(30px);
+  }
+
+  [class*="-error"] {
+    font-size: rem(12px);
+    padding: rem(3px);
+    display: none;
+  }
+
+  &-email-save {
+    width: 16px;
+    height: 16px;
+  }
+  &-checkbox-wrapper {
+    display: flex;
+    margin-top: rem(15px);
+    margin-bottom: rem(135px);
+    label {
+      font-size: rem(12px);
+      padding: rem(4px);
+    }
+  }
+  &-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      flex-flow: column nowrap;
+      gap: rem(15px);
+      margin-bottom: rem(50px);
+    }
+
+    @include desktop {
+      gap: rem(20px);
+      margin-bottom: rem(70px);
+    }
+  }
+
+  input {
+    caret-color: $grayscale-white;
+  }
+}
+
+fieldset {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include desktop {
+    max-width: 540px;
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.input-label {
+  position: absolute;
+  padding: rem(4px);
+  top: 50%;
+  left: rem(10px);
+  transform: translateY(-50%);
+  transition: all 400ms;
+}
+
+.input-label:focus-visible {
+  top: 0;
+  left: 0;
+  font-size: rem(12px);
+}
+
+.submit-button {
+  position: relative;
+  background: $grayscale-white;
+  border: 0;
+  color: $accent-amber1;
+  width: 100%;
+  height: rem(48px);
+  border-radius: rem(10px);
+  font-size: rem(20px);
+}
+
+.link-button {
+  position: relative;
+  display: inline-block;
+  background: rbga(#fff, 0);
+  text-align: center;
+  border: 1px solid $grayscale-snow;
+  color: $grayscale-white;
+  width: 100%;
+  height: rem(48px);
+  border-radius: rem(10px);
+  font-size: rem(20px);
+  line-height: rem(48px);
+}
+
+.submit-button::after,
+.link-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: rem(20px);
+  height: rem(20px);
+  top: 50%;
+  right: rem(14px);
+  transform: translateY(-50%);
+  background: url("../../../assets/images/icon-arrow-disabled.svg");
 }

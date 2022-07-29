@@ -13,6 +13,7 @@
     @include marginY(16px);
     color: $primary-blue1;
 
+
     &::before {
       content: "";
       display: inline-block;
@@ -42,13 +43,14 @@
   @include mobile {
     width: 50%;
   }
+
   @include desktop {
     width: rem(120px);
   }
-
   button {
     @include fontBold(15px);
     width: 100%;
+
     border: 1px solid $grayscale-snow;
     color: $primary-blue1;
     background: white;
@@ -67,6 +69,7 @@
 
 // 공통 섹션
 .news-section {
+
   @include paddingX(20px);
   @include paddingY(40px);
 
@@ -85,6 +88,7 @@
 
   select {
     position: relative;
+
     @include mobile {
       width: 20%;
     }
@@ -93,7 +97,6 @@
       margin-left: 285px;
     }
     border: 0;
-
     background-color: $grayscale-snow;
     text-indent: rem(6px);
     line-height: rem(21px);
@@ -106,6 +109,7 @@
     background: black;
   }
   .search-input {
+
     @include mobile {
       width: 80%;
     }
@@ -121,6 +125,7 @@
   }
   button {
     @include posabs($r: 0);
+
     background: url(../../../assets/images/icon-search.svg) no-repeat;
     border: 0;
     width: rem(16px);
@@ -137,9 +142,9 @@
   }
   tbody {
     td {
+
       @include paddingX(15px);
       @include paddingY(15px);
-
       time {
         font-size: rem(12px);
         color: $primary-blue1;
@@ -154,10 +159,10 @@
   th:first-child {
     width: 15%;
     @include paddingY(15px);
-    padding: rem(15px) 0;
   }
   th:nth-child(2) {
     width: 55%;
+
     @include paddingY(15px);
   }
   th:nth-child(3) {
@@ -171,7 +176,6 @@
     }
   }
 }
-
 .news-press-link {
   img {
     @include mobile {
@@ -198,6 +202,7 @@
   &-data {
     color: #878787;
   }
+
   @include desktop {
     text-align: start;
     padding-left: 80px;

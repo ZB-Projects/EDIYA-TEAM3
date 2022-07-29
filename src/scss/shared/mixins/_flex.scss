@@ -1,0 +1,9 @@
+@use "../functions/unit" as *;
+// flexbox
+@mixin flexbox($d: row, $j: flex-start, $a: stretch, $w: nowrap) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+  flex-wrap: $w;
+}
