@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/resultPages/news/index.css" />
   </head>
   <body>
-    <header>
+  <header>
+
       <h1 class="sr-only">이디야 커피</h1>
       <button class="navigationButton">네비게이션 보기</button>
       <ul class="navigation">
@@ -18,22 +19,24 @@
         <li tabindex="-1">이디야 음료</li>
         <li tabindex="-1">이디야 뉴스</li>
         <li tabindex="-1">매장찾기</li>
+
       </ul>
     </header>
     <main>
       <div class="news">
         <h2 class="sr-only">이디야 뉴스</h2>
-        <ul class="news-list">
+
+        <ul class="news-list" role="tablist">
           <li class="news-items"><button>공지사항</button></li>
           <li class="news-items is--select"><button>언론 속 이디야</button></li>
           <li class="news-items"><button>홍보영상</button></li>
           <li class="news-items"><button>수상내역</button></li>
         </ul>
-        <section class="news-section news-notice">
+        <section class="news-section news-notice" role="tabpanel">
           <h3 class="news-title">공지사항</h3>
           <p>공지사항 내역 입니다.</p>
         </section>
-        <section class="news-section news-press is--select">
+        <section class="news-section news-press is--select" role="tabpanel">
           <h3 class="news-title">언론 속 이디야</h3>
           <p>이디야의 소식을 전해드립니다.</p>
           <div class="news-press-form-container">
@@ -74,7 +77,7 @@
                     <a href="/" class="news-press-link">
                       <img
                         src="../../assets/images/news-thumbnail.jpg"
-                        alt="신제품, 기존 케이크 사진"
+                        alt="기존과 신제품 케이크 사진"
                       />
                       <dl class="press-content">
                         <dt class="press-content-title">
@@ -97,7 +100,10 @@
                   <td>015</td>
                   <td>
                     <a href="/" class="news-press-link">
-                      <img src="./assets/images/news-thumbnail.jpg" alt="" />
+                      <img
+                        src="../../assets/images/ediya-table-thumb.jpg"
+                        alt="이디야 썸네일 사진"
+                      />
                       <dl class="press-content">
                         <dt class="press-content-title">
                           [매일경제] 이디야커피, 공정거래조정원 '착한
@@ -119,7 +125,10 @@
                   <td>014</td>
                   <td>
                     <a href="/" class="news-press-link">
-                      <img src="./assets/images/news-thumbnail.jpg" alt="" />
+                      <img
+                        src="../../assets/images/ediya-table-thumb.jpg"
+                        alt="이디야 썸네일 사진"
+                      />
                       <dl class="press-content">
                         <dt class="press-content-title">
                           [매일경제] 이디야커피, 공정거래조정원 '착한
@@ -141,7 +150,10 @@
                   <td>013</td>
                   <td>
                     <a href="/" class="news-press-link">
-                      <img src="./assets/images/news-thumbnail.jpg" alt="" />
+                      <img
+                        src="../../assets/images/ediya-table-thumb.jpg"
+                        alt="이디야 썸네일 사진"
+                      />
                       <dl class="press-content">
                         <dt class="press-content-title">
                           [매일경제] 이디야커피, 공정거래조정원 '착한
@@ -163,7 +175,10 @@
                   <td>012</td>
                   <td>
                     <a href="/" class="news-press-link">
-                      <img src="./assets/images/news-thumbnail.jpg" alt="" />
+                      <img
+                        src="../../assets/images/ediya-table-thumb.jpg"
+                        alt="이디야 썸네일 사진"
+                      />
                       <dl class="press-content">
                         <dt class="press-content-title">
                           [매일경제] 이디야커피, 공정거래조정원 '착한
@@ -195,11 +210,11 @@
             </div>
           </div>
         </section>
-        <section class="news-section news-promotion">
+        <section class="news-section news-promotion" role="tabpanel">
           <h3 class="news-title">홍보영상</h3>
           <p>홍보영상 내역 입니다.</p>
         </section>
-        <section class="news-section news-awards">
+        <section class="news-section news-awards" role="tabpanel">
           <h3 class="news-title">수상내역</h3>
           <p>이디야의 영광스런 수상내역입니다.</p>
           <div class="news-award-container">
