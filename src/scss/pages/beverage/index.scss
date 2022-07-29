@@ -28,7 +28,7 @@
   text-align: center;
   color: $grayscale-black;
   font-size: rem(16px);
-  
+
   &-list {
     @include flexbox($d: column);
 
@@ -79,7 +79,7 @@
     &-name {
       font-size: rem(18px);
       border-bottom: 2px solid $grayscale-black;
-      
+
       p {
         margin-top: rem(8px);
         margin-bottom: rem(16px);
@@ -112,7 +112,7 @@
         border-left: 1px solid black;
         padding-left: rem(6px);
       }
-      
+
     }
 
     .close-btn {
@@ -121,7 +121,7 @@
       border: 0;
       width: 20px;
       height: 20px;
-      background-image: url(../../../assets/images/button-close.svg);
+      background-image: url(../../assets/images/button-close.svg);
     }
   }
 }

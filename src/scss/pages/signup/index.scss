@@ -11,10 +11,10 @@
   background-image: url("../../../assets/media/coffee-latte-art.gif");
 
   // @include mobile {
-  //   background-image: url("../../../assets/images/coffee-mobile.jpg");
+  //   background-image: url("../../assets/images/coffee-mobile.jpg");
   // }
   // @include desktop {
-  //   background-image: url("../../../assets/images/coffee-desktop.jpg");
+  //   background-image: url("../../assets/images/coffee-desktop.jpg");
   // }
 
   &-title {
@@ -162,5 +162,5 @@ fieldset {
   top: 50%;
   right: rem(14px);
   transform: translateY(-50%);
-  background: url("../../../assets/images/icon-arrow-disabled.svg");
+  background: url("../../assets/images/icon-arrow-disabled.svg");
 }

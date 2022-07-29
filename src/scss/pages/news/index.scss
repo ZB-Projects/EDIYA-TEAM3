@@ -17,7 +17,7 @@
     &::before {
       content: "";
       display: inline-block;
-      background: url(../../../assets/images/icon-news-headline.svg) no-repeat;
+      background: url(../../assets/images/icon-news-headline.svg) no-repeat;
       width: rem(8px);
       height: rem(16px);
       margin-right: rem(4px);
@@ -126,7 +126,7 @@
   button {
     @include posabs($r: 0);
 
-    background: url(../../../assets/images/icon-search.svg) no-repeat;
+    background: url(../../assets/images/icon-search.svg) no-repeat;
     border: 0;
     width: rem(16px);
     height: rem(16px);
@@ -229,13 +229,13 @@
   }
   .button-prev {
     border: 0;
-    background: url(../../../assets/images/button-prev.svg) no-repeat;
+    background: url(../../assets/images/button-prev.svg) no-repeat;
     width: rem(16px);
     height: rem(16px);
   }
   .button-next {
     border: 0;
-    background: url(../../../assets/images/button-next.svg) no-repeat;
+    background: url(../../assets/images/button-next.svg) no-repeat;
     width: rem(16px);
     height: rem(16px);
   }
