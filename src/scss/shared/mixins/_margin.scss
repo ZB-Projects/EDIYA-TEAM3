@@ -1,3 +1,5 @@
+@use "./../functions/unit" as *;
+
 // 좌우 마진
 @mixin marginX($marginX: 0) {
   margin-left: rem($marginX);

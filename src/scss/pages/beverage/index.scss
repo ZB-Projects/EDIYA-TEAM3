@@ -54,6 +54,10 @@
     img:hover {
       @include transitionZoomIn;
     }
+
+    figcaption {
+      margin-top: 20px;
+    }
   }
 
   &-info {
@@ -66,7 +70,7 @@
       width: 100%;
       height: 100%;
       padding: rem(30px) rem(20px) 0 rem(20px);
-      border: 1px solid $grayscale-gray;
+      border: 1px solid #cccccc;
       background: $grayscale-snow;
       opacity: 0.8;
       text-align: left;
@@ -79,6 +83,7 @@
       p {
         margin-top: rem(8px);
         margin-bottom: rem(16px);
+
         color: $grayscale-gray;
       }
     }
@@ -89,20 +94,21 @@
     }
 
     &-nutrition {
-      @include flexbox($w: wrap);
       @include pos;
-
       bottom: rem(11px);
 
-      dd, dt {
-        width: 24%;
-      }
+      column-count: 2;
+      column-rule: 1px solid $grayscale-black;
 
-      dd {
+      dt, dd {
+        display: inline-block;
+        width: 40%;
         margin-bottom: rem(5px);
       }
 
-      dt:nth-child(4n + 3) {
+
+      dt:nth-last-child(3) {
+        background: blue;
         border-left: 1px solid black;
         padding-left: rem(6px);
       }
