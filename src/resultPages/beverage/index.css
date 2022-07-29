@@ -408,12 +408,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
-}
-@media (min-width: 768px) {
-  header {
-    padding: rem(0px) rem(30px);
-  }
 }
 
 @media (min-width: 768px) {
@@ -425,7 +419,7 @@ header {
   .navigationButton {
     background-image: url("../../assets/images/button-navigation.svg");
     background-repeat: no-repeat;
-    background-size: 30px 30px;
+    background-size: 1.875rem 1.875rem;
     background-position: center;
     background-color: transparent;
     border: 0;
@@ -474,7 +468,6 @@ header {
     color: #24388d;
     justify-content: space-between;
     width: 40%;
-    max-width: rem(427px);
   }
 }
 @media (max-width: 767px) {
@@ -487,8 +480,8 @@ header {
 }
 
 .logo {
-  width: rem(140px);
-  height: rem(14px);
+  width: 9.375rem;
+  height: 1.875rem;
 }
 
 .beverage {

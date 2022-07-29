@@ -1,5 +1,6 @@
 @use '../../shared/constants' as *;
 @use '../../shared/mixins' as *;
+@use '../../shared/functions' as *;
 
 
 header {
@@ -7,10 +8,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
-  @include desktop{
-    padding:rem(0px) rem(30px);
-  }
 }
 .navigationButton {
   @include desktop{
@@ -19,7 +16,7 @@ header {
   @include mobile{
     background-image: url("../../assets/images/button-navigation.svg");
     background-repeat: no-repeat;
-    background-size: 30px 30px;
+    background-size: rem(30px) rem(30px);
     background-position: center;
     background-color: transparent;
     border: 0;
@@ -65,7 +62,7 @@ header {
     color: $primary-blue1;
     justify-content: space-between;
     width: 40%;
-    max-width: rem(427px);
+    //max-width: rem(427px);
   }
 
 
@@ -79,6 +76,6 @@ header {
   }
 }
 .logo{
-  width: rem(140px);
-  height: rem(14px);
+  width: rem(150px);
+  height: rem(30px);
 }
