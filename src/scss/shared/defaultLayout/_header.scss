@@ -1,5 +1,5 @@
+@use '../../shared/constants' as *;
 
-// @use '../../shared/classes' as *;
 header {
   padding: 18px;
   display: flex;
@@ -29,7 +29,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    background: navy;
+    background: $grayscale-darkgray;
     color: white;
     width: 100vw;
     height: 100vh;
@@ -45,16 +45,16 @@ header {
     background-position: center;
     background-color: transparent;
     border: 0;
-    width: 50px;
-    height: 50px;
+    width: 16px;
+    height: 16px;
     position: absolute;
-    right: 8px;
-    top: 8px;
+    right: 25px;
+    top: 25px;
   }
 
   li {
     padding: 12px;
-    border-top: 1px solid white;
+    border-top: 1px solid $primary-blue2;
     margin-left: 10px;
     margin-right: 10px;
   }
