@@ -85,6 +85,7 @@ main {
   padding: rem(8px) rem(18px);
   color: $primary-blue1;
   border: 1px solid currentColor;
+  white-space: nowrap;
   background: transparent;
   @include fontBold(14px);
   margin-top: rem(15px);
