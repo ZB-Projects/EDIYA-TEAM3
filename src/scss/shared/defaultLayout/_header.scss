@@ -1,17 +1,60 @@
-.header {
-  position: relative;
-  max-width: 740px;
-  margin-left: auto;
-  margin-right: auto;
+// @use '../../shared/classes' as *;
+header {
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
 
-  &-nav-button {
+.navigationButton {
+  background-image: url("../../../assets/images/button-navigation.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+  background-color: transparent;
+  border: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.navigation {
+  display: none;
+  transform: translateX(0px);
+  padding-top: 106px;
+
+  &.is--active {
+    display: block;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    left: 0;
+    background: navy;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
   }
 
-  &-nav-list {
-    display: flex;
-    flex-flow: row nowrap;
+  &::before {
+    display: block;
+    content: "";
+    background-image: url("../../../assets/images/button-detail-close.svg");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    background-color: transparent;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+
+  li {
+    padding: 12px;
+    border-top: 1px solid white;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
