@@ -686,8 +686,6 @@ header {
   text-align: start;
 }
 .press-content-title, .press-content-data {
-  width: 55vw;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
